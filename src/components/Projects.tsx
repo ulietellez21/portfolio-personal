@@ -40,18 +40,24 @@ export default function Projects() {
               <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${typeColors[project.type]}`}>
                 {project.type}
               </span>
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 {project.private ? (
-                  <Lock size={16} className="text-gray-400 mt-1" />
+                  <Lock size={16} className="text-gray-400" />
                 ) : (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-500 transition-colors mt-1">
-                    <GithubIcon size={16} />
-                  </a>
-                )}
-                {project.link && !project.private && (
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-500 transition-colors mt-1">
-                    <ExternalLink size={16} />
-                  </a>
+                  <>
+                    {'repo' in project && project.repo && (
+                      <a href={project.repo} target="_blank" rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-brand-500 transition-colors" title="Ver código">
+                        <GithubIcon size={16} />
+                      </a>
+                    )}
+                    {'demo' in project && project.demo && (
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-brand-500 transition-colors" title="Ver demo">
+                        <ExternalLink size={16} />
+                      </a>
+                    )}
+                  </>
                 )}
               </div>
             </div>
@@ -61,13 +67,25 @@ export default function Projects() {
               {project.description}
             </p>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-4">
               {project.tech.map((t) => (
                 <span key={t} className="text-xs font-mono bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 px-2 py-1 rounded">
                   {t}
                 </span>
               ))}
             </div>
+
+            {'demo' in project && project.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 w-full py-2 rounded-xl border border-brand-400/40 text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-900/10 text-sm font-medium transition-colors"
+              >
+                <ExternalLink size={14} />
+                Ver en vivo
+              </a>
+            )}
           </motion.div>
         ))}
       </div>

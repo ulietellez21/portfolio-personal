@@ -31,7 +31,7 @@ export const projects = [
     tech: ['Python', 'Streamlit', 'Claude API', 'Anthropic SDK'],
     type: 'IA',
     status: 'Open Source',
-    link: 'https://github.com/ulietellez21/ai-text-analyzer',
+    repo: 'https://github.com/ulietellez21/ai-text-analyzer',
     private: false,
   },
   {
@@ -40,7 +40,8 @@ export const projects = [
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Storybook', 'clsx'],
     type: 'Design',
     status: 'Open Source',
-    link: 'https://github.com/ulietellez21/ui-design-system',
+    demo: 'https://ulietellez21.github.io/ui-design-system/',
+    repo: 'https://github.com/ulietellez21/ui-design-system',
     private: false,
   },
   {
@@ -49,7 +50,8 @@ export const projects = [
     tech: ['React', 'TypeScript', 'Recharts', 'Tailwind CSS'],
     type: 'Frontend',
     status: 'Open Source',
-    link: 'https://github.com/ulietellez21/data-dashboard',
+    demo: 'https://ulietellez21.github.io/data-dashboard/',
+    repo: 'https://github.com/ulietellez21/data-dashboard',
     private: false,
   },
   {
@@ -58,7 +60,7 @@ export const projects = [
     tech: ['React', 'FastAPI', 'Python', 'SQLite', 'JWT'],
     type: 'Full Stack',
     status: 'Open Source',
-    link: 'https://github.com/ulietellez21/fullstack-task-manager',
+    repo: 'https://github.com/ulietellez21/fullstack-task-manager',
     private: false,
   },
   {
@@ -67,7 +69,7 @@ export const projects = [
     tech: ['Node.js', 'Express', 'TypeScript', 'JWT', 'Swagger'],
     type: 'Backend',
     status: 'Open Source',
-    link: 'https://github.com/ulietellez21/rest-api-auth',
+    repo: 'https://github.com/ulietellez21/rest-api-auth',
     private: false,
   },
   {
@@ -76,7 +78,8 @@ export const projects = [
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
     type: 'Frontend',
     status: 'Open Source',
-    link: 'https://github.com/ulietellez21/portfolio-personal',
+    demo: 'https://ulietellez21.github.io/portfolio-personal/',
+    repo: 'https://github.com/ulietellez21/portfolio-personal',
     private: false,
   },
 ]
